@@ -22,7 +22,15 @@ int main() {
     penne = 3;
     anni = 22;
     iniziale = 'p';
-    printf("%d %d %c", iniziale, anni, iniziale);
+    printf("%d %d %c\n", penne, anni, iniziale); //new line (a capo)
+     // ricevi in input un nome
+    printf("quanti anni hai?");
+    int age;
+    scanf("%d",&age); //& = e commerciale
+
+    // stampami age
+    printf("%d",age);
+
 
 
 }
