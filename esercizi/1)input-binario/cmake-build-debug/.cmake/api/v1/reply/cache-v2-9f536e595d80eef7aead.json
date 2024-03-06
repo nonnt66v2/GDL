@@ -2,6 +2,42 @@
 	"entries" : 
 	[
 		{
+			"name" : "1_input_binario_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/nonnt66/Scaricati/uni/GDL/esercizi/1)input-binario/cmake-build-debug"
+		},
+		{
+			"name" : "1_input_binario_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "1_input_binario_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/nonnt66/Scaricati/uni/GDL/esercizi/1)input-binario"
+		},
+		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -55,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/nonnt66/Documenti/GitHub/GDL/cmake-build-debug"
+			"value" : "/home/nonnt66/Scaricati/uni/GDL/esercizi/1)input-binario/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -415,7 +451,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/nonnt66/Documenti/GitHub/GDL/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/nonnt66/Scaricati/uni/GDL/esercizi/1)input-binario/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -475,7 +511,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/nonnt66/Documenti/GitHub/GDL"
+			"value" : "/home/nonnt66/Scaricati/uni/GDL/esercizi/1)input-binario"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -715,7 +751,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "GDL"
+			"value" : "1_input_binario"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1012,42 +1048,6 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
-		},
-		{
-			"name" : "GDL_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/nonnt66/Documenti/GitHub/GDL/cmake-build-debug"
-		},
-		{
-			"name" : "GDL_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "GDL_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/nonnt66/Documenti/GitHub/GDL"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

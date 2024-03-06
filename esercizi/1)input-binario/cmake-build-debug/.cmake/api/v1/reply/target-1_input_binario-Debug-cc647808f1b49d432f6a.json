@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "GDL"
+			"path" : "1_input_binario"
 		}
 	],
 	"backtrace" : 1,
@@ -53,7 +53,7 @@
 			]
 		}
 	],
-	"id" : "GDL::@6890427a1f51a3e7e1df",
+	"id" : "1_input_binario::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -69,8 +69,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "GDL",
-	"nameOnDisk" : "GDL",
+	"name" : "1_input_binario",
+	"nameOnDisk" : "1_input_binario",
 	"paths" : 
 	{
 		"build" : ".",

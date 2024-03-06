@@ -1,4 +1,4 @@
-# Install script for directory: /home/nonnt66/Documenti/GitHub/GDL
+# Install script for directory: /home/nonnt66/Scaricati/uni/GDL/esercizi/1)input-binario
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nonnt66/Documenti/GitHub/GDL/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nonnt66/Scaricati/uni/GDL/esercizi/1)input-binario/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
