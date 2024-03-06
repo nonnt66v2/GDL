@@ -61,32 +61,3 @@ Per contribuire, segui questi passaggi:
 Il tuo feedback è prezioso per noi! Se hai domande, suggerimenti o incontri problemi con gli esercizi, non esitare a contattarci aprendo una issue in questa repository.
 
 Buon divertimento e buono studio con gli esercizi in linguaggio C! 🚀
-
-
-
-# Progetto Awesome
-
-[![Build Status](https://travis-ci.org/username/project.svg?branch=master)](https://travis-ci.org/username/project)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-Questo è un progetto incredibile che fa cose fantastiche!
-
-## Stato del Progetto
-
-- Ultima build: [![Build Status](https://travis-ci.org/username/project.svg?branch=master)](https://travis-ci.org/username/project)
-- Copertura dei test: 90%
-
-## Features
-
-- Funzionalità fantastica 1
-- Funzionalità fantastica 2
-- ...
-
-## Contribuzione
-
-Siamo sempre alla ricerca di nuovi contributi! Sentiti libero di aprire una pull request.
-
-## Licenza
-
-Questo progetto è rilasciato sotto la licenza MIT. Per ulteriori informazioni, consultare il file [LICENSE](LICENSE).
-
