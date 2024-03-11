@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(esercizi
         "1)input-binario/main.c"
-        "2)hello-world/main.c")
+        "2)hello-world/main.c"
+        compito_in_classe/main.c)
