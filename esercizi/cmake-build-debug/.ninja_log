@@ -1,3 +1,6 @@
 # ninja log v5
+30	45	1710252199436165338	esercizi	cf2f2d38da760dd8
+0	12	1710252247790477229	build.ninja	5b9e7cb42e89f0ae
 1	178	1709733687406074552	CMakeFiles/esercizi.dir/1)input-binario/main.c.o	ffde4949769814c1
-0	17	1709734042626202235	CMakeFiles/esercizi.dir/2)hello-world/main.c.o	b45dd07ccf5bf89c
+0	30	1710252199420165897	CMakeFiles/esercizi.dir/4)svolgimento_compito_in_classe/main.c.o	19e1bf0d14602889
+0	346	1710252144258099436	CMakeFiles/esercizi.dir/2)hello-world/main.c.o	b45dd07ccf5bf89c
