@@ -4,4 +4,4 @@ project(esercizi C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(esercizi
-        "4)svolgimento_compito_in_classe/main.c")
+        "6)switch/main.c")

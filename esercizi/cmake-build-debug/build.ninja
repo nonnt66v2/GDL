@@ -49,11 +49,11 @@ cmake_ninja_workdir = /home/nonnt66/Scaricati/uni/GDL/esercizi/cmake-build-debug
 
 build cmake_object_order_depends_target_esercizi: phony || CMakeFiles/esercizi.dir
 
-build CMakeFiles/esercizi.dir/4)svolgimento_compito_in_classe/main.c.o: C_COMPILER__esercizi_unscanned_Debug /home/nonnt66/Scaricati/uni/GDL/esercizi/4)svolgimento_compito_in_classe/main.c || cmake_object_order_depends_target_esercizi
-  DEP_FILE = "CMakeFiles/esercizi.dir/4)svolgimento_compito_in_classe/main.c.o.d"
+build CMakeFiles/esercizi.dir/6)switch/main.c.o: C_COMPILER__esercizi_unscanned_Debug /home/nonnt66/Scaricati/uni/GDL/esercizi/6)switch/main.c || cmake_object_order_depends_target_esercizi
+  DEP_FILE = "CMakeFiles/esercizi.dir/6)switch/main.c.o.d"
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/esercizi.dir
-  OBJECT_FILE_DIR = "CMakeFiles/esercizi.dir/4)svolgimento_compito_in_classe"
+  OBJECT_FILE_DIR = "CMakeFiles/esercizi.dir/6)switch"
 
 
 # =============================================================================
@@ -63,7 +63,7 @@ build CMakeFiles/esercizi.dir/4)svolgimento_compito_in_classe/main.c.o: C_COMPIL
 #############################################
 # Link the executable esercizi
 
-build esercizi: C_EXECUTABLE_LINKER__esercizi_Debug CMakeFiles/esercizi.dir/4)svolgimento_compito_in_classe/main.c.o
+build esercizi: C_EXECUTABLE_LINKER__esercizi_Debug CMakeFiles/esercizi.dir/6)switch/main.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/esercizi.dir
   POST_BUILD = :
