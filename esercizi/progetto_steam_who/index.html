@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Steam WHO</title>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="style/homeStyle.css">
+</head>
+<body>
+<!--crea una div centrata che contenga una fotografia, una label per effettuare una domanda e 2 bottoni per rispondere si o no alla domanda-->
+<div id="container" style="text-align: center;">
+    <img id="immagine" src="img/img.png" alt="Steam Logo" style="width: 200px; height: 200px;">
+    <label id="domandaLabel">il suo personaggio è Italiano?</label>
+    <label id="rispostaLabel"></label>
+    <br>
+    <button onclick="yes()">Yes</button>
+    <button onclick="no()">No</button>
+<!--    <button onclick="mostraRisposte()">mostra risposte</button>-->
+</div>
+
+</body>
+</html>
