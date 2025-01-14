@@ -1,7 +1,9 @@
-
 //Creare un vettore delle caratteristiche di un personaggio famoso es. (italiano, biondo, occhi azzurri, ecc)
 
-const caratteristica = ['italiano', 'biondo', 'occhi azzurri', 'alto', 'magro', 'capelli corti','bello','brutto','pittore','pilota','donna','uomo','attore'];
+const caratteristica = ['italiano', 'biondo', 'occhi azzurri', 'alto', 'magro', 'capelli corti', 'bello', 'brutto', 'pittore', 'pilota', 'donna', 'uomo', 'attore'];
+
+const nomiPersonaggi = ['brad pitt', 'b', 'c', 'd']
+
 
 // creare una variabile indice che parte da 0
 
@@ -27,14 +29,15 @@ function precedenteCaratteristica() {
     return getCaratteristica();
 }
 
-function domanda(){
+function domanda() {
     const risposta = prompt('Vuoi la prossima caratteristica? si/no');
-    if(risposta === 'si'){
+    if (risposta === 'si') {
         console.log(prossimaCaratteristica());
     } else {
         console.log(precedenteCaratteristica());
     }
 }
+
 // stampare la caratteristica corrente
 
 // domanda();
@@ -43,10 +46,9 @@ function domanda(){
 // un vettore con delle caratteristiche e l'indice di ogni caratteristica
 
 
-
 class Caratteristiche {
     constructor() {
-        this.nome = ['italiano', 'biondo', 'occhi azzurri', 'alto', 'magro', 'capelli corti','bello','brutto','pittore','pilota','donna','uomo','attore'];
+        this.nome = ['italiano', 'biondo', 'occhi azzurri', 'alto', 'magro', 'capelli corti', 'bello', 'brutto', 'pittore', 'pilota', 'donna', 'uomo', 'attore'];
         this.indice = 0;
     }
 
@@ -77,53 +79,88 @@ const caratteristiche = new Caratteristiche();
 //crea una funzione yes() che restituisca la prossima caratteristica in una label di nome "domandaLabel" e salvi l'indice della caratteristica corrente allìinterno di un vettore di indici
 
 
-
-
 let risposte = [];
 
 
+let risp = document.getElementById('rispostaLabel');
+risp.hidden = true;
+function prossimaDomanda() {
+    if (caratteristiche.indice >= caratteristiche.nome.length - 2) {
 
-function prossimaDomanda(){
-    if(caratteristiche.indice >=  caratteristiche.nome.length-2)  {
+        //risoltato è il nome del personaggio con le caratteristiche cirrispondenti alla matrice di associazione con eventuale immagine
+        let immSrc = document.getElementById('immagine');
+        document.getElementById('rispostaLabel').innerHTML = "risultato";
+        if (risposte.length > 5) {
+            immSrc.src = "img/img_1.png"
 
-            //risoltato è il nome del personaggio con le caratteristiche cirrispondenti alla matrice di associazione con eventuale immagine
-            let immSrc = document.getElementById('immagine');
-            document.getElementById('rispostaLabel').innerHTML = "risultato" ;
-            if(risposte.length > 5 ) immSrc.src = "img/img_1.png";
-            else immSrc.src = "img/img_2.png";
-            document.getElementById('domandaLabel').hidden = true;
+            risp.hidden = false;
+            risp.innerHTML = presente.name.toString();
         }
-    document.getElementById('domandaLabel').innerHTML = "il suo personaggio è "+prossimaCaratteristica().toString()+"?" ;
+        else immSrc.src = "img/img_2.png";
+        document.getElementById('domandaLabel').hidden = true;
+    }
+    document.getElementById('domandaLabel').innerHTML = "il suo personaggio è " + prossimaCaratteristica().toString() + "?";
 }
 
-function inserisciRisposta(risposta){
+function inserisciRisposta(risposta) {
     for (const risposteElement of risposte) {
-        if(risposteElement === risposta){
-                return false;
+        if (risposteElement === risposta) {
+            return false;
         }
     }
     return true;
 }
 
-function yes(){
-    if(inserisciRisposta(caratteristiche.indice)) risposte.push(caratteristiche.indice);
-    if(caratteristiche.indice < caratteristiche.nome.length-1)caratteristiche.indice+=1;
+function yes() {
+    if (inserisciRisposta(caratteristiche.indice)) risposte.push(caratteristiche.indice);
+    if (caratteristiche.indice < caratteristiche.nome.length - 1) caratteristiche.indice += 1;
     // console.log(caratteristiche.nome[caratteristiche.indice]);
-    console.log("indice corrente: "+caratteristiche.indice);
+    console.log("indice corrente: " + caratteristiche.indice);
     prossimaDomanda();
 }
 
-console.log("dimensione array caratteristiche["+caratteristiche.nome.length+"]");
+console.log("dimensione array caratteristiche[" + caratteristiche.nome.length + "]");
 
 
-function no(){
+function no() {
     prossimaDomanda();
-    if(caratteristiche.indice < caratteristiche.nome.length-1)caratteristiche.indice+=1;
+    if (caratteristiche.indice < caratteristiche.nome.length - 1) caratteristiche.indice += 1;
 }
+
 //
 // function mostraRisposte(){
 //     document.getElementById('rispostaLabel').innerHTML = risposte.toString();
 // }
+
+
+// 2,3,4
+var matriceAssociazione = [
+    {name: nomiPersonaggi[0]/*brad*/, car: [1, 2, 3]/*biondo, occhi azzurri e alto*/},
+    {name: nomiPersonaggi[1], car: [4, 5, 6]},
+    {name: nomiPersonaggi[2], car: [7, 8, 9]},
+    {name: nomiPersonaggi[3], car: [10, 11, 12]}
+]
+
+risposte[0] = 1;
+risposte[1] = 2;
+risposte[2] = 2;
+
+
+function controllaRisposte(){
+    let trovato = 0
+
+    for (let i=0;i<matriceAssociazione.length;i++){
+        for (let j = 0; j < risposte; j++) {
+            if(matriceAssociazione[j+1][i] === risposte[j]) trovato++;
+        }
+        if(trovato === risposte.length-1) return true;
+    }
+    return false;
+}
+const presente = matriceAssociazione.find(controllaRisposte)
+
+console.log(presente.name);
+console.log(matriceAssociazione);
 
 
 
