@@ -2,7 +2,20 @@
 
 const caratteristica = ['italiano', 'biondo', 'occhi azzurri', 'alto', 'magro', 'capelli corti', 'bello', 'brutto', 'pittore', 'pilota', 'donna', 'uomo', 'attore'];
 
-const nomiPersonaggi = ['brad pitt', 'b', 'c', 'd']
+const nomiPersonaggi = ['brad pitt', 'leonardo di caprio', 'angelina jolie', 'carl cox']
+
+let presente;
+
+
+var matriceAssociazione = [
+    {name: nomiPersonaggi[0]/*brad*/, car: [1, 2, 3]/*biondo, occhi azzurri e alto*/},
+    {name: nomiPersonaggi[1], car: [4, 5, 6]},
+    {name: nomiPersonaggi[2], car: [7, 8, 9]},
+    {name: nomiPersonaggi[3], car: [10, 11, 12]}
+]
+
+
+let risposte = [];
 
 
 // creare una variabile indice che parte da 0
@@ -79,26 +92,35 @@ const caratteristiche = new Caratteristiche();
 //crea una funzione yes() che restituisca la prossima caratteristica in una label di nome "domandaLabel" e salvi l'indice della caratteristica corrente allìinterno di un vettore di indici
 
 
-let risposte = [];
-
-
 let risp = document.getElementById('rispostaLabel');
 risp.hidden = true;
+
 function prossimaDomanda() {
     if (caratteristiche.indice >= caratteristiche.nome.length - 2) {
-
+        presente = controllaRisposte(matriceAssociazione);
+        if(presente>=0 ){
         //risoltato è il nome del personaggio con le caratteristiche cirrispondenti alla matrice di associazione con eventuale immagine
         let immSrc = document.getElementById('immagine');
         document.getElementById('rispostaLabel').innerHTML = "risultato";
-        if (risposte.length > 5) {
-            immSrc.src = "img/img_1.png"
-
+            immSrc.src = "img/"+presente+".png"
             risp.hidden = false;
-            risp.innerHTML = presente.name.toString();
-        }
-        else immSrc.src = "img/img_2.png";
+            risp.innerHTML = matriceAssociazione[presente].name;
+
         document.getElementById('domandaLabel').hidden = true;
+        }
+        else  {
+
+            document.getElementById('domandaLabel').hidden = true;
+            let immSrc = document.getElementById('immagine');
+            immSrc.src = "img/"+404+".png";
+            risp.hidden = false;
+            document.getElementById('rispostaLabel').innerHTML = "risultato";
+            risp.innerHTML = "ATTORE NON TROVATO, RIPROVARE";
+
+        }
     }
+
+
     document.getElementById('domandaLabel').innerHTML = "il suo personaggio è " + prossimaCaratteristica().toString() + "?";
 }
 
@@ -115,6 +137,7 @@ function yes() {
     if (inserisciRisposta(caratteristiche.indice)) risposte.push(caratteristiche.indice);
     if (caratteristiche.indice < caratteristiche.nome.length - 1) caratteristiche.indice += 1;
     // console.log(caratteristiche.nome[caratteristiche.indice]);
+    console.log(risposte);
     console.log("indice corrente: " + caratteristiche.indice);
     prossimaDomanda();
 }
@@ -134,33 +157,22 @@ function no() {
 
 
 // 2,3,4
-var matriceAssociazione = [
-    {name: nomiPersonaggi[0]/*brad*/, car: [1, 2, 3]/*biondo, occhi azzurri e alto*/},
-    {name: nomiPersonaggi[1], car: [4, 5, 6]},
-    {name: nomiPersonaggi[2], car: [7, 8, 9]},
-    {name: nomiPersonaggi[3], car: [10, 11, 12]}
-]
-
-risposte[0] = 1;
-risposte[1] = 2;
-risposte[2] = 2;
 
 
-function controllaRisposte(){
+function controllaRisposte(matriceAssociazione) {
     let trovato = 0
-
-    for (let i=0;i<matriceAssociazione.length;i++){
-        for (let j = 0; j < risposte; j++) {
-            if(matriceAssociazione[j+1][i] === risposte[j]) trovato++;
+    for (let i = 0; i < matriceAssociazione.length; i++) { ///4
+        for (let j = 0; j < risposte.length; j++) {
+            if (matriceAssociazione[i].car[j] === risposte[j]) trovato++;
         }
-        if(trovato === risposte.length-1) return true;
+        if (trovato >= risposte.length - 1) {
+            return i;
+        }
+        trovato = 0;
     }
-    return false;
+    return -1;
 }
-const presente = matriceAssociazione.find(controllaRisposte)
 
-console.log(presente.name);
-console.log(matriceAssociazione);
 
 
 
