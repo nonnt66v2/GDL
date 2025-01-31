@@ -6,6 +6,18 @@ const nomiPersonaggi = ['brad pitt', 'leonardo di caprio', 'angelina jolie', 'ca
 
 let presente;
 
+let riprovaBtn = document.getElementById("riprovaBtn");
+riprovaBtn.hidden = true;
+
+let riprovaLabel = document.getElementById("riprovaLabel");
+riprovaLabel.hidden = true;
+
+
+let yesBtn = document.getElementById("yesBtn");
+let noBtn = document.getElementById("noBtn");
+yesBtn.hidden = false;
+noBtn.hidden = false;
+
 
 var matriceAssociazione = [
     {name: nomiPersonaggi[0]/*brad*/, car: [1, 2, 3]/*biondo, occhi azzurri e alto*/},
@@ -98,24 +110,30 @@ risp.hidden = true;
 function prossimaDomanda() {
     if (caratteristiche.indice >= caratteristiche.nome.length - 2) {
         presente = controllaRisposte(matriceAssociazione);
-        if(presente>=0 ){
-        //risoltato è il nome del personaggio con le caratteristiche cirrispondenti alla matrice di associazione con eventuale immagine
-        let immSrc = document.getElementById('immagine');
-        document.getElementById('rispostaLabel').innerHTML = "risultato";
-            immSrc.src = "img/"+presente+".png"
+        yesBtn.hidden = true;
+        noBtn.hidden = true;
+        if (presente >= 0) {
+            //risoltato è il nome del personaggio con le caratteristiche cirrispondenti alla matrice di associazione con eventuale immagine
+            let immSrc = document.getElementById('immagine');
+            document.getElementById('rispostaLabel').innerHTML = "risultato";
+            immSrc.src = "img/" + presente + ".png"
             risp.hidden = false;
             risp.innerHTML = matriceAssociazione[presente].name;
+            riprovaBtn.hidden = false;
+            riprovaLabel.hidden = false;
 
-        document.getElementById('domandaLabel').hidden = true;
-        }
-        else  {
+
+            document.getElementById('domandaLabel').hidden = true;
+        } else {
 
             document.getElementById('domandaLabel').hidden = true;
             let immSrc = document.getElementById('immagine');
-            immSrc.src = "img/"+404+".png";
+            immSrc.src = "img/" + 404 + ".png";
             risp.hidden = false;
             document.getElementById('rispostaLabel').innerHTML = "risultato";
             risp.innerHTML = "ATTORE NON TROVATO, RIPROVARE";
+            riprovaBtn.hidden = false;
+
 
         }
     }
@@ -173,6 +191,11 @@ function controllaRisposte(matriceAssociazione) {
     return -1;
 }
 
+
+function riprova() {
+    risposte = [];
+    location.reload();
+}
 
 
 
