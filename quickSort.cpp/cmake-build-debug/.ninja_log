@@ -1,0 +1,7 @@
+# ninja log v6
+1	81	1738944280405067244	CMakeFiles/quickSort_cpp.dir/main.cpp.o.ddi	1bcc2801271c2eed
+82	84	1738944280487061696	CMakeFiles/quickSort_cpp.dir/CXX.dd	c0627e6d1c928c1b
+82	84	1738944280487061696	/home/nonnt66/Scaricati/uni/GDL/GDL/quickSort.cpp/cmake-build-debug/CMakeFiles/quickSort_cpp.dir/CXXModules.json	c0627e6d1c928c1b
+82	84	1738944280487061696	CMakeFiles/quickSort_cpp.dir/main.cpp.o.modmap	c0627e6d1c928c1b
+84	554	1738944280487061696	CMakeFiles/quickSort_cpp.dir/main.cpp.o	3e6d025b3483ebc6
+555	608	1738944280959029764	quickSort_cpp	db382344ce776f7d
