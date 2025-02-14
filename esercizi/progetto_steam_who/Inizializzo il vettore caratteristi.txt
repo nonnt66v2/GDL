@@ -1,0 +1,52 @@
+Inizializzo il vettore caratteristiche [1...N]
+inizializzo il vettore nomePersonaggi [1...M]
+inizializzo matriceAssociazione [1...N] [1...M]
+ottengo elementi dall'HTML
+ 
+riprovaLabel=elemento presente nell'HTML
+imposto le proprietà della label
+ottengo i bottoni come la label
+ne imposto le proprietà
+inizializzo indice=0
+
+	function getCaratteristicha
+		ritorno alla caratteristica dell'indice corrente
+	function prossimaCaratteristica
+		restituisco la caratteristica successiva
+	function precedenteCaratteristica
+		restituisco la caratteristica precedente
+
+inizializzo una classe caratteristiche con metodi e attributi
+	nome indice
+inizializzo uno oggetto di tipo caratteristiche
+
+	function prossimaDomanda
+		  se indice > caratteristiche: 
+			controllo le risposte fornite
+			nascondo i bottoni Y/N
+			se è presente personaggio con caratteristiche fornite:mostro all'utente il personaggio 
+				
+			altrimenti mostro all'utente un messaggio con su scritto: personaggio non trovato													
+		altrimenti passo alla prossima domanda
+
+	function inserisciRisposte
+		controlla se la risposta fa parte dell'arrey caratteristiche
+			in caso affermativo restituisco il vero
+			in caso negativo  restituisco falso
+
+	function yes
+		se inserisciRisposte == vero inserisco la risposta nell'arrey risposta
+		passa alla prossima domanda
+		
+
+	fuction no
+		passa alla prossima domanda
+
+	fuction controllaRisposte
+		controlla se le risposte date si trovano nella matrice associazione
+		in caso contrario ritorna -1
+
+	fuction riprova
+		fa ripartire il programma
+		
+  
