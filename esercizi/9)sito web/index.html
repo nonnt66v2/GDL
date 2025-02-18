@@ -1,27 +1,73 @@
 <!DOCTYPE html>
-Istruzioni
-Creare un sito web su un argomento a piacere composto da:
-almeno 5 pagine con contenuti suddivisi in cartelle
-un menu che consenta da qualunque pagine di navigare sulle pagine o tornare alla home page
-foglio di stile
-tabelle
-elenchi puntati e numerati
-Consegnare argomento e url del sito
+<!--Istruzioni-->
+<!--Creare un sito web su un argomento a piacere composto da:-->
+<!--almeno 5 pagine con contenuti suddivisi in cartelle-->
+<!--un menu che consenta da qualunque pagine di navigare sulle pagine o tornare alla home page-->
+<!--foglio di stile-->
+<!--tabelle-->
+<!--elenchi puntati e numerati-->
+<!--Consegnare argomento e url del sito-->
 
 <head>
     <title> Biblioteca </title>
+    <link rel="stylesheet" href="style/homeStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body>
 
-<a href=""
+<body>
+<div id="navbar"></div>
+<script>
+    window.onload = function () {
+        $.get("nav.html", function (data) {
+            $("#navbar").html(data);
+        })
+    }
+</script>
+
+
+<h1>Benvenuto nella biblioteca</h1>
+
+<table>
+    <colgroup id="a" span="3"></colgroup>
+    <thead>
+    <tr>
+        <th>Nome Libro</th>
+        <th>Descrizione Libro</th>
+        <th>Prezzo Libro</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><a href="libro1.html" target="_blank">Libro 1</a></td>
+        <td>cell</td>
+        <td>cell</td>
+    </tr>
+    <tr>
+        <td><a href="libro2.html" target="_blank">Libro 2</a></td>
+        <td>cell</td>
+        <td>cell</td>
+    </tr>
+    <tr>
+        <td><a href="libro3.html" target="_blank">Libro 3</a></td>
+        <td>cell</td>
+        <td>cell</td>
+    </tr>
+    <tr>
+        <td><a href="libro4.html" target="_blank">Libro 4</a></td>
+        <td>cell</td>
+        <td>cell</td>
+    </tr>
+    <tr>
+        <td><a href="libro5.html" target="_blank">Libro 5</a></td>
+        <td>cell</td>
+        <td>cell</td>
+    </tr>
+
+    </tbody>
+</table>
 
 </body>
-
-
-
-
-
 
 
 </html>

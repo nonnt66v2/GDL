@@ -1,0 +1,64 @@
+table{
+    width:100%;
+    margin:0 auto;
+    border:1px solid #eee;
+    border-collapse:collapse;
+    margin-bottom:20px;
+}
+
+th{
+    background-color: #60ea0b;
+    color:#333;
+    font-weight:bold;
+}
+table,
+td,
+th
+{
+    border:1px solid #eee;
+    border-collapse:collapse;
+    padding:3px 5px;
+}
+td
+{
+    text-align:center;
+}
+th
+{
+    text-align:center
+}
+tr:nth-child(2n+1) {background-color:#D5E4FF;}
+caption
+{
+    font-weight:bold;
+    color:#999
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
